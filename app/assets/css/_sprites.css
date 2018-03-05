@@ -1,0 +1,36 @@
+.icon-a-2x:before {
+	content: " ";
+	display: inline-block;
+	background-image: url(../img/_sprites.png);
+	background-position: calc(-122px / 2) calc(0px / 2);
+	width: calc(37px / 2);
+	height: calc(53px / 2);
+	background-size: calc(159px / 2) calc(116px / 2);
+}
+.icon-b-2x:before {
+	content: " ";
+	display: inline-block;
+	background-image: url(../img/_sprites.png);
+	background-position: calc(0px / 2) calc(0px / 2);
+	width: calc(56px / 2);
+	height: calc(53px / 2);
+	background-size: calc(159px / 2) calc(116px / 2);
+}
+.icon-c-2x:before {
+	content: " ";
+	display: inline-block;
+	background-image: url(../img/_sprites.png);
+	background-position: calc(-66px / 2) calc(0px / 2);
+	width: calc(46px / 2);
+	height: calc(53px / 2);
+	background-size: calc(159px / 2) calc(116px / 2);
+}
+.icon-d-2x:before {
+	content: " ";
+	display: inline-block;
+	background-image: url(../img/_sprites.png);
+	background-position: calc(0px / 2) calc(-63px / 2);
+	width: calc(32px / 2);
+	height: calc(53px / 2);
+	background-size: calc(159px / 2) calc(116px / 2);
+}
