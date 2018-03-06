@@ -1,36 +1,82 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 	<head>
-		#include("../../components/meta/meta.html")
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>BALI</title>
 	</head>
-	<body data-spy="scroll" data-target="#spyTarget" id="index">
-		<div id='layout'>
-		    #include("../../components/header/header.html")
-			#include("../../components/jumbotron/jumbotron.html")
-			<div class="container mar-b-30">
-				<div class="row">
-					<div class="hidden-xs col-sm-4 col-md-3" id="spyTarget">					
-						<ul class="nav nav-pills nav-stacked affixNav" data-spy="affix" data-offset-top="351">
-			                <li class="active"><a href="#pc">pc端项目</a></li>
-			                <li><a href="#yd">移动端项目</a></li>
-			            </ul>
-					</div>
-					<div class="col-xs-12 col-sm-8 col-md-9 content">
-						<div class="mar-b-20" id="pc">
-							<h3 class="category">PC端项目</h3>
-							<div class="row"></div>
-						</div>
-						<div id="yd">
-							<h3 class="category">移动端项目</h3>
-							<div class="row"></div>
-						</div>
-					</div>
+	<body>
+		<div class="nav-container fixed-top">
+			<nav class="nav-bar">
+				<div class="nav-bar__logo">
+					LOGO
 				</div>
-			</div>
-		    <div id='layout_footer'></div>
+				<ul class="nav-bar__nav">
+					<li class="active">
+                        <a href="#">Home</a>
+                    </li>
+					<li>
+                        <a href="#">About Us</a>
+                    </li>
+					<li>
+                        <a href="#">About Bali</a>
+                    </li>
+					<li>
+                        <a href="#">Download Apps</a>
+                    </li>
+					<li>
+                        <a href="#">Log In</a>
+                    </li>
+					<li>
+                        <a href="#">Register</a>
+                    </li>
+				</ul>
+			</nav>
 		</div>
-		<div id='footer'>
-			#include("../../components/footer/footer.html")
-		</div>
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <!-- 指示符 -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+            <!-- 轮播图片 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="http://static.runoob.com/images/mix/img_fjords_wide.jpg">
+                    <div class="carousel-caption">
+                        <h3>Getting Easier to Bali with Bali Travel Board</h3>
+                        <p>Make Bali as the best destination in the world through the professional improvement of tourism destination area.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="http://static.runoob.com/images/mix/img_nature_wide.jpg">
+                    <div class="carousel-caption">
+                        <h3>Getting Easier to Bali with Bali Travel Board</h3>
+                        <p>Make Bali as the best destination in the world through the professional improvement of tourism destination area.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="http://static.runoob.com/images/mix/img_mountains_wide.jpg">
+                    <div class="carousel-caption">
+                        <h3>Getting Easier to Bali with Bali Travel Board</h3>
+                        <p>Make Bali as the best destination in the world through the professional improvement of tourism destination area.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 左右切换按钮 -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+        <div class="footer-container fixed-bottom">
+            <div class="footer-bar">
+                <span>©2010-2013 Bali Tourism Board All Rights Reserved.</span>
+                <span>Terms of Use Privacy</span>
+            </div>
+        </div>
 	</body>
 </html>

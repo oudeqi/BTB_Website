@@ -123,11 +123,7 @@ module.exports = {
                 padding: 10
             }
         }),
-        ...entry.map((current) => {
-            return current.html
-        }).map((current) => {
-            return new HtmlWebpackPlugin(current)
-        }),
+        ...entry.map((current) => { return new HtmlWebpackPlugin(current.html) }),
         // new webpack.DllReferencePlugin({
         //     manifest: require('../dll_modules/dll-manifest.json')
         // }),
