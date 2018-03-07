@@ -14,7 +14,7 @@ let entry = require('./entry');
 let vendor = NODE_ENV !== 'production' ? { vendor: ['jquery', 'bootstrap', 'bootstrap/dist/css/bootstrap.css'] } : {}
 
 module.exports = {
-    context: path.resolve(__dirname, '..', 'app'),
+    // context: path.resolve(__dirname, '..', 'app'),
     entry: entry.reduce((total, current) => { return Object.assign(total, current.js) }, vendor),
     output: {
         path: path.join(__dirname, '..', 'dist'),

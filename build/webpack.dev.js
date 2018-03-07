@@ -27,11 +27,11 @@ module.exports = merge(base, {
             test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
             loader: 'file-loader',
             options: {
-                name: 'fonts/[name].[ext]',
+                name: 'font/[name].[ext]',
                 publicPath: '../',
                 // 会覆盖css里面的字体的对外路径，所以不设置
                 // 或者和css里字体的对外路径设置成一样
-                limit: 1024 * 5,
+                limit: 1024 * 5 * 10000,
             }
         }]
     },

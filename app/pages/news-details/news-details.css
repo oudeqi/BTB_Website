@@ -1,0 +1,131 @@
+@import "../../assets/css/_variable.css";
+.giant-screen {
+    width: 100%;
+    min-width: $minWidth;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.news-details {
+    max-width: $maxWidth;
+    min-width: $minWidth;
+    padding-right: $boundaryDistance;
+    padding-left: $boundaryDistance;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 45px;
+}
+
+.news-details__pic {
+    width: 33%;
+    min-width: 250px;
+    min-height: 112px;
+    flex-shrink: 0;
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+.news-details__body {
+    flex-grow: 1;
+    margin-left: 5%;
+    color: rgb(74, 74, 74);
+    .tit {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .subtit {
+        font-size: 14px;
+    }
+    .date {
+        font-size: 14px;
+    }
+}
+
+.news-list {
+    max-width: $maxWidth;
+    min-width: $minWidth;
+    padding-right: $boundaryDistance;
+    padding-left: $boundaryDistance;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.news-list__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    h5 {
+        font-size: 18px;
+        color: rgb(74, 74, 74);
+        margin-bottom: 0;
+    }
+    a {
+        font-size: 16px;
+        color: rgb(74, 74, 74);
+    }
+}
+.news-list__items {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 2px;
+    border: 1px solid #f1f1f1;
+    overflow: hidden;
+    box-shadow: 0 1px 2px 0 rgb(203, 202, 202);
+    .item {
+        display: flex;
+        align-content: flex-start;
+        border-bottom: solid 1px rgb(239, 239, 239);
+        padding: 10px;
+        .pic {
+            flex-shrink: 0;
+            min-width: 250px;
+            width: 25%;
+            overflow: hidden;
+            border-radius: 2px;
+            img {
+                width: 100%;
+            }
+        }
+        .body {
+            color: rgb(74, 74, 74);
+            flex-grow: 1;
+            margin-left: 20px;
+            h5 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.footer-container {
+    background-color: rgb(0, 0, 0);
+    min-width: $minWidth;
+    .footer-bar {
+        max-width: $maxWidth;
+        padding-right: $boundaryDistance;
+        padding-left: $boundaryDistance;
+        margin: 0 auto;
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        span{
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 12px;
+        }
+    }
+}
