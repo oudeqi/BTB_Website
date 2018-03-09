@@ -52,5 +52,15 @@ module.exports = [
             minify: minify,
             chunksSortMode: 'dependency'
         }
+    },
+    {
+        js: {share: './app/pages/share/share.js'},
+        html: {
+            filename: 'share.html',
+            template: 'html-withimg-loader!./app/pages/share/share.html',
+            chunks: chunks.concat(['share']),
+            minify: minify,
+            chunksSortMode: 'dependency'
+        }
     }
 ]

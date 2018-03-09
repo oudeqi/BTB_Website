@@ -2,6 +2,7 @@
 console.log(process.env.NODE_ENV);
 import 'bootstrap/dist/css/bootstrap.css'
 import './index.css';
+import 'bootstrap'
 
 // 测试模拟数据
 $.get('http://localhost:3005/employee/123', function(res){
