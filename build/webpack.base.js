@@ -11,7 +11,7 @@ const { NODE_ENV, PUBLIC_PATH } = require('../config');
 require('nodemon')('./dyson_services/index.js');
 
 let entry = require('./entry');
-let vendor = NODE_ENV !== 'production' ? { vendor: ['jquery', 'bootstrap', 'bootstrap/dist/css/bootstrap.css'] } : {}
+let vendor = NODE_ENV === 'production' ? { vendor: ['jquery', 'bootstrap', 'bootstrap/dist/css/bootstrap.css'] } : {}
 
 module.exports = {
     // context: path.resolve(__dirname, '..', 'app'),
@@ -56,9 +56,9 @@ module.exports = {
                         options: {
                             config: {
                                 path: 'postcss.config.js',
-                                ctx: {
-                                    autoprefixer: {browsers: ['> 1%']}
-                                }
+                                // ctx: {
+                                //     autoprefixer: {browsers: ['> 1%']}
+                                // }
                             }
                         }
                     }],

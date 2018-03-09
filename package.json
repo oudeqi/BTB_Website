@@ -38,6 +38,7 @@
     "postcss-at2x": "^4.0.2",
     "postcss-calc": "^6.0.0",
     "postcss-color-rgba-fallback": "^3.0.0",
+    "postcss-cssnext": "^3.1.0",
     "postcss-functions": "^3.0.0",
     "postcss-loader": "^2.0.6",
     "postcss-mq-keyframes": "^0.3.0",
@@ -61,7 +62,7 @@
   },
   "dependencies": {
     "accounting": "^0.4.1",
-    "bootstrap": "^4.0.0",
+    "bootstrap": "^4.0.0-alpha.6",
     "jquery": "^2.2.4",
     "popper.js": "^1.12.9"
   }

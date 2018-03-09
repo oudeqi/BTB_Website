@@ -1,6 +1,7 @@
 module.exports = function({file, options, env}){
 	return {
 		plugins: {
+			// 'postcss-cssnext': {},
 			'precss': {},
 			'postcss-at2x': {},//retina 2倍图片
 			// 'postcss-triangle': {},//创建三角形
@@ -40,7 +41,7 @@ module.exports = function({file, options, env}){
 			    }
 			},//自定义函数 px2rem
 			'postcss-responsive-type': {},//响应式文本
-			'autoprefixer': env === 'production' ? options.autoprefixer : false,
+			// 'autoprefixer': env === 'production' ? options.autoprefixer : false,
 			'postcss-mq-keyframes': {},//将所有关键帧从现有媒体查询中移动到样式表的底部
 			'css-mqpacker': {},//相同的媒体查询样式合并到一个媒体查询中
 			'cssnano': env === "production" ? {} : false
