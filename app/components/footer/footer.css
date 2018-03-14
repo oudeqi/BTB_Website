@@ -1,10 +1,22 @@
-footer{
-	background: #eee; 
-	height: 50px; 
-	line-height: 50px;
-	text-align: center;
-	font-size: 12px;
-}
-footer a{
-	color: #333333;
+@import "../../assets/css/_variable.css";
+.footer-container {
+	background-color: rgb(0, 0, 0);
+	min-width: $minWidth;
+	.footer-bar {
+		max-width: $maxWidth;
+		padding-right: $boundaryDistance;
+		padding-left: $boundaryDistance;
+		margin: 0 auto;
+		height: 30px;
+		line-height: 30px;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		span{
+			display: inline-block;
+			margin-left: 10px;
+			font-size: 12px;
+		}
+	}
 }

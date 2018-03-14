@@ -1,0 +1,11 @@
+@import "../../assets/css/_variable.css";
+
+.giant-screen {
+    width: 100%;
+    min-width: $minWidth;
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

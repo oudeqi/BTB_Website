@@ -1,4 +1,8 @@
 @import "../../assets/css/_variable.css";
+@import "../../components/header/header.css";
+@import "../../components/giant-screen/giant-screen.css";
+@import "../../components/category/category.css";
+@import "../../components/footer/footer.css";
 
 .product-container {
     padding-top: 40px;

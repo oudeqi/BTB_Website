@@ -1,0 +1,32 @@
+@import "../../assets/css/_variable.css";
+@import "../../components/header/header.css";
+@import "../../components/giant-screen/giant-screen.css";
+@import "../../components/category/category.css";
+@import "../../components/footer/footer.css";
+
+body {
+    background-color: rgb(239, 239, 239);
+    min-width: $minWidth;
+}
+
+.terms-of-use-privacy {
+    max-width: 780px;
+    margin: 15px auto;
+    padding: $boundaryDistance;
+    background-color: #fff;
+    min-height: 500px;
+}
+
+.head {
+    font-size: 20px;
+    color: rgb(74, 74, 74);
+}
+
+.body {
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+    word-break: keep-all;
+    color: rgb(74, 74, 74);
+}

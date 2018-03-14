@@ -1,4 +1,8 @@
 @import "../../assets/css/_variable.css";
+@import "../../components/header/header.css";
+@import "../../components/giant-screen/giant-screen.css";
+@import "../../components/category/category.css";
+@import "../../components/footer/footer.css";
 
 .best-choice {
     max-width: $maxWidth;
@@ -39,11 +43,11 @@
             overflow: hidden;
             .pic {
                 background-color: #eee;
-            img {
-                width: 100%;
-                display: block;
-                height: auto;
-            }
+                img {
+                    width: 100%;
+                    display: block;
+                    height: auto;
+                }
             }
             .txt {
                 border: 1px solid #f1f1f1;
@@ -67,6 +71,67 @@
                         color: rgb(74, 74, 74);
                     }
                 }
+            }
+        }
+    }
+}
+
+.news-list {
+    max-width: $maxWidth;
+    min-width: $minWidth;
+    padding-right: $boundaryDistance;
+    padding-left: $boundaryDistance;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.news-list__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    h5 {
+        font-size: 18px;
+        color: rgb(74, 74, 74);
+        margin-bottom: 0;
+    }
+    a {
+        font-size: 16px;
+        color: rgb(74, 74, 74);
+    }
+}
+.news-list__items {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 2px;
+    border: 1px solid #f1f1f1;
+    overflow: hidden;
+    /*box-shadow: 0 1px 2px 0 rgb(203, 202, 202);*/
+    .item {
+        display: flex;
+        align-content: flex-start;
+        border-bottom: solid 1px rgb(239, 239, 239);
+        padding: 10px;
+        .pic {
+            flex-shrink: 0;
+            min-width: 250px;
+            width: 25%;
+            overflow: hidden;
+            border-radius: 2px;
+            img {
+                width: 100%;
+            }
+        }
+        .body {
+            color: rgb(74, 74, 74);
+            flex-grow: 1;
+            margin-left: 20px;
+            h5 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
             }
         }
     }
