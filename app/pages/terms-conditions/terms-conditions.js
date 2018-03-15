@@ -1,7 +1,4 @@
 // __webpack_public_path__ = process.env.PUBLIC_PATH;
 console.log(process.env.NODE_ENV);
 import 'bootstrap/dist/css/bootstrap.css'
-import './index.css'
-import 'bootstrap'
-
-$('[data-target="index"]').addClass('active')
+import './terms-conditions.css'

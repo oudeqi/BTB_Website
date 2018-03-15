@@ -1,4 +1,8 @@
+@import "../../assets/css/_variable.css";
 @import "../../components/header/header.css";
+@import "../../components/category/category.css";
+@import "../../components/best-choice/best-choice.css";
+@import "../../components/news-list/news-list.css";
 
 body {
 	background-color: #fff;
@@ -37,15 +41,26 @@ body,
     overflow: hidden;
 }
 .carousel {
+    position: relative;
     min-width: $minWidth;
-    .carousel-control-prev,
-    .carousel-control-next {
-        span{
-            width: 30px;
-            height: 50px;
-        }
+    .carousel-control-prev-icon {
+        width: 20px;
+        height: 36px;
+        background-image: url("../../assets/img/icon-arrow-left.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .carousel-control-next-icon {
+        width: 20px;
+        height: 36px;
+        background-image: url("../../assets/img/icon-arrow-right.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
     }
     .carousel-indicators {
+        margin: 0;
         bottom: 60px;
         li {
             border-radius: 4px;
@@ -69,10 +84,10 @@ body,
             bottom: 15%;
             left: 15%;
             z-index: 10;
-            /*display: flex;*/
-            /*flex-direction: column;*/
-            /*align-items: flex-start;*/
-            /*justify-content: center;*/
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
             text-align: left;
             h3 {
                 font-size: 45px;
@@ -88,3 +103,76 @@ body,
     }
 }
 
+
+.download {
+    height: 100%;
+    width: 100%;
+    background-color: #eee;
+    min-width: $minWidth;
+    position: relative;
+    background-image: url("../../assets/img/download-bg-01.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.download:after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    height: 45%;
+    width: 100%;
+    background-image: url("../../assets/img/download-bg-02.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+.download-contain {
+    max-width: $maxWidth;
+    min-width: $minWidth;
+    padding-right: $boundaryDistance;
+    padding-left: $boundaryDistance;
+    margin: 0 auto;
+    border: 1px solid #eee;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+}
+.phone-warpper {
+    width: 60%;
+    background: rgba(0,0,0,0.3);
+}
+.phone-warpper:after {
+    content: " ";
+    display: block;
+    margin-left: 20%;
+    height: 100%;
+    background-color: pink;
+}
+.btn-warpper {
+    width: 50%;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    p {
+        color: #fff;
+        font-size: 28px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        margin: 10px;
+    }
+    a {
+        display: block;
+        width: 150px;
+        height: 44px;
+        background-image: url("../../assets/img/download-btn.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}

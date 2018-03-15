@@ -2,6 +2,7 @@
 @import "../../components/header/header.css";
 @import "../../components/giant-screen/giant-screen.css";
 @import "../../components/category/category.css";
+@import "../../components/news-list/news-list.css";
 @import "../../components/footer/footer.css";
 
 .news-details {

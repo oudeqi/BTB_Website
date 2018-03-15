@@ -5,16 +5,22 @@
 .nav-container {
     background: rgba(74,74,74,.38);
     min-width: $minWidth;
-    .nav-bar {
-        max-width: $maxWidth;
-        padding-right: $boundaryDistance;
-        padding-left: $boundaryDistance;
-        margin: 0 auto;
-        height: 40px;
-        display: flex;
-        align-items: stretch;
-        justify-content: space-between;
-    }
+}
+
+.dark-nav-container {
+    background: rgb(74,74,74);
+    min-width: $minWidth;
+}
+
+.nav-bar {
+    max-width: $maxWidth;
+    padding-right: $boundaryDistance;
+    padding-left: $boundaryDistance;
+    margin: 0 auto;
+    height: 40px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
 }
 
 .nav-bar__logo {

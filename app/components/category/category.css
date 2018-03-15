@@ -7,6 +7,31 @@
     border-bottom: 1px solid rgb(232, 232, 232);
 }
 
+.icon-attraction {
+    background-image: url("../../assets/img/icon-attraction.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.icon-restaurannt {
+    background-image: url("../../assets/img/icon-restaurannt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.icon-tour {
+    background-image: url("../../assets/img/icon-tour.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.icon-souvenir {
+    background-image: url("../../assets/img/icon-souvenir.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
 .category-warpper {
     max-width: $maxWidth;
     padding-right: $boundaryDistance;
@@ -27,13 +52,12 @@
         a {
             color: rgb(74, 74, 74);
         }
-        i {
+        .icon {
             display: inline-block;
             vertical-align: middle;
             margin-right: 5px;
             width: 20px;
             height: 20px;
-            background-color: #eee;
         }
         strong {
             display: inline-block;

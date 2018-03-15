@@ -23,54 +23,94 @@ module.exports = [
 		    chunksSortMode: 'dependency'
 		}
 	},
-    {
-      js: {newsDetails: './app/pages/news-details/news-details.js'},
-      html: {
-        filename: 'news-details.html',
-        template: 'html-withimg-loader!./app/pages/news-details/news-details.html',
-        chunks: chunks.concat(['newsDetails']),
-        minify: minify,
-        chunksSortMode: 'dependency'
-      }
-    },
-    {
-      js: {productDetails: './app/pages/product-details/product-details.js'},
-      html: {
-        filename: 'product-details.html',
-        template: 'html-withimg-loader!./app/pages/product-details/product-details.html',
-        chunks: chunks.concat(['productDetails']),
-        minify: minify,
-        chunksSortMode: 'dependency'
-      }
-    },
-    {
-      js: {dashboard: './app/pages/dashboard/dashboard.js'},
-      html: {
-        filename: 'dashboard.html',
-        template: 'html-withimg-loader!./app/pages/dashboard/dashboard.html',
-        chunks: chunks.concat(['dashboard']),
-        minify: minify,
-        chunksSortMode: 'dependency'
-      }
-    },
-    {
-      js: {share: './app/pages/share/share.js'},
-      html: {
-        filename: 'share.html',
-        template: 'html-withimg-loader!./app/pages/share/share.html',
-        chunks: chunks.concat(['share']),
-        minify: minify,
-        chunksSortMode: 'dependency'
-      }
-    },
-    {
-      js: {termsOfUsePrivacy: './app/pages/terms-of-use-privacy/terms-of-use-privacy.js'},
-      html: {
-        filename: 'terms-of-use-privacy.html',
-        template: 'html-withimg-loader!./app/pages/terms-of-use-privacy/terms-of-use-privacy.html',
-        chunks: chunks.concat(['termsOfUsePrivacy']),
-        minify: minify,
-        chunksSortMode: 'dependency'
-      }
+  {
+    js: {newsDetails: './app/pages/news-details/news-details.js'},
+    html: {
+      filename: 'news-details.html',
+      template: 'html-withimg-loader!./app/pages/news-details/news-details.html',
+      chunks: chunks.concat(['newsDetails']),
+      minify: minify,
+      chunksSortMode: 'dependency'
     }
+  },
+  {
+    js: {productDetails: './app/pages/product-details/product-details.js'},
+    html: {
+      filename: 'product-details.html',
+      template: 'html-withimg-loader!./app/pages/product-details/product-details.html',
+      chunks: chunks.concat(['productDetails']),
+      minify: minify,
+      chunksSortMode: 'dependency'
+    }
+  },
+  {
+    js: {share: './app/pages/share/share.js'},
+    html: {
+      filename: 'share.html',
+      template: 'html-withimg-loader!./app/pages/share/share.html',
+      chunks: chunks.concat(['share']),
+      minify: minify,
+      chunksSortMode: 'dependency'
+    }
+  },
+  {
+    js: {privacyPolicy: './app/pages/privacy-policy/privacy-policy.js'},
+    html: {
+      filename: 'privacy-policy.html',
+      template: 'html-withimg-loader!./app/pages/privacy-policy/privacy-policy.html',
+      chunks: chunks.concat(['privacyPolicy']),
+      minify: minify,
+      chunksSortMode: 'dependency'
+    }
+  },
+  {
+    js: {termsConditions: './app/pages/terms-conditions/terms-conditions.js'},
+    html: {
+      filename: 'terms-conditions.html',
+      template: 'html-withimg-loader!./app/pages/terms-conditions/terms-conditions.html',
+      chunks: chunks.concat(['termsConditions']),
+      minify: minify,
+      chunksSortMode: 'dependency'
+    }
+  },
+  {
+    js: {aboutBali: './app/pages/about-bali/about-bali.js'},
+    html: {
+      filename: 'about-bali.html',
+      template: 'html-withimg-loader!./app/pages/about-bali/about-bali.html',
+      chunks: chunks.concat(['aboutBali']),
+      minify: minify,
+      chunksSortMode: 'dependency'
+    }
+  },
+  {
+    js: {aboutUs: './app/pages/about-us/about-us.js'},
+    html: {
+      filename: 'about-us.html',
+      template: 'html-withimg-loader!./app/pages/about-us/about-us.html',
+      chunks: chunks.concat(['aboutUs']),
+      minify: minify,
+      chunksSortMode: 'dependency'
+    }
+  },
+  {
+    js: {bestChoice: './app/pages/best-choice/best-choice.js'},
+    html: {
+      filename: 'best-choice.html',
+      template: 'html-withimg-loader!./app/pages/best-choice/best-choice.html',
+      chunks: chunks.concat(['bestChoice']),
+      minify: minify,
+      chunksSortMode: 'dependency'
+    }
+  },
+  {
+    js: {news: './app/pages/news/news.js'},
+    html: {
+      filename: 'news.html',
+      template: 'html-withimg-loader!./app/pages/news/news.html',
+      chunks: chunks.concat(['news']),
+      minify: minify,
+      chunksSortMode: 'dependency'
+    }
+  }
 ]
