@@ -4,23 +4,61 @@
             BALI
         </div>
         <ul class="nav-bar__nav">
-            <li data-role="navItem" data-target="index">
-                <a href="./index.html">Home</a>
+            <li class="nav-item" data-target="index">
+                <a href="./index.html" class="link">Home</a>
             </li>
-            <li data-role="navItem" data-target="aboutUs">
-                <a href="./about-us.html">About Us</a>
+            <li class="nav-item" data-target="aboutUs">
+                <a href="./about-us.html" class="link">About Us</a>
             </li>
-            <li data-role="navItem" data-target="aboutBali">
-                <a href="./about-bali.html">About Bali</a>
+            <li class="nav-item" data-target="aboutBali">
+                <a href="./about-bali.html" class="link">About Bali</a>
             </li>
-            <li data-role="navItem" data-target="download">
-                <a href="javascript:void(0);">Download Apps</a>
+            <li class="nav-item" data-target="download">
+                <a href="javascript:void(0);" class="link">Download Apps</a>
             </li>
-            <li data-role="navItem" data-target="login">
-                <a href="javascript:void(0);">Log In</a>
+            <li class="nav-item dropdown" data-target="login">
+                <a href="javascript:void(0);" class="link dropdown-login" data-toggle="dropdown">Log In</a>
+                <form class="dropdown-menu dropdown-menu-right form-login">
+                    <h4>Log In</h4>
+                    <div class="login-ipt-warpper">
+                        <input type="text" placeholder="Email / Phone Number">
+                    </div>
+                    <div class="login-ipt-warpper">
+                        <input type="password" placeholder="Password">
+                        <a href="javascript:void(0);" class="icon"></a>
+                    </div>
+                    <p>
+                        <a href="javascript:void(0);">Sign Up</a>
+                        <a href="javascript:void(0);" id="forgetBtn">Forgot Password?</a>
+                    </p>
+                    <div class="login-btn-warpper">
+                        <button type="button" class="btn-login">Log In</button>
+                    </div>
+                    <div class="login-btn-warpper">
+                        <button type="button" class="btn-cancel" id="cancel">Cancel</button>
+                    </div>
+                </form>
             </li>
-            <li data-role="navItem" data-target="register">
-                <a href="javascript:void(0);">Register</a>
+            <li class="nav-item dropdown" data-target="myProfile">
+                <a href="javascript:void(0);" class="link dropdown-profile" data-toggle="dropdown">My Profile</a>
+                <form class="dropdown-menu dropdown-menu-right profile">
+                    <div class="profile-head">
+                        <div class="profile-head-pic">
+                            <img src="" alt="">
+                        </div>
+                        <div class="profile-head-info">
+                            <p class="name">btbtourism</p>
+                            <p class="phone">+62 81289826272</p>
+                            <p class="email">btbtourism@gmail.com</p>
+                        </div>
+                        <a class="profile-head-icon" href="javascript:void(0);"></a>
+                    </div>
+                    <a class="profile-item" href="javascript:void(0);">Change Password</a>
+                    <a class="profile-item" href="javascript:void(0);">Change Phone Number</a>
+                    <a class="profile-item" href="javascript:void(0);">Terms of Service</a>
+                    <a class="profile-item" href="javascript:void(0);">Privacy Policy</a>
+                    <a class="profile-item" href="javascript:void(0);">Log Out</a>
+                </form>
             </li>
         </ul>
     </nav>

@@ -3,5 +3,16 @@ console.log(process.env.NODE_ENV);
 import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
 import 'bootstrap'
+import '../../components/modal/modal.js'
 
 $('[data-target="index"]').addClass('active')
+
+
+
+$('#cancel').bind('click', function () {
+    $('.dropdown-login').dropdown('toggle');
+})
+
+$('#forgetBtn').bind('click', function () {
+    $('#forget-1').modal('show')
+})
