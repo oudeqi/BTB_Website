@@ -1,24 +1,43 @@
+<!-- 忘记密码第一步 -->
 <div class="modal" id="forget-1" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <h4 class="forget-head">Sign Up</h4>
+        <div class="modal-content modal-content__forget-1">
+            <h4 class="head">Sign Up</h4>
             <div class="tab">
-                <div class="tab-head">
-                    <span class="tab-head-item active">Phone Number</span>
-                    <span class="tab-head-item">Email Address</span>
+                <div class="nav nav-tabs tab-head">
+                    <a href="#forget-tab-phone" class="tab-head-item active" data-toggle="tab">
+                        Phone Number
+                    </a>
+                    <a href="#forget-tab-email" class="tab-head-item" data-toggle="tab">
+                        Email Address
+                    </a>
                 </div>
-                <div class="tab-body">
-                    <div class="forget-ipt-warpper">
-                        <div class="addon">
-                            <i></i>
-                            <span>ID +62</span>
+                <div class="tab-content">
+                    <div id="forget-tab-phone" class="tab-pane tab-body active">
+                        <div class="ipt-warpper">
+                            <div class="addon">
+                                <i></i>
+                                <span>ID +62</span>
+                            </div>
+                            <div class="ipt">
+                                <input type="text" placeholder="Phone Number">
+                            </div>
                         </div>
-                        <div class="ipt">
-                            <input type="text" placeholder="Phone Number">
-                        </div>
+                        <button class="btn-next" type="button">Next</button>
+                        <p class="tips">Verification code will be sent to your phone number</p>
                     </div>
-                    <button class="btn-next" type="button">Next</button>
-                    <p class="tips">Verification code will be sent to your phone number</p>
+                    <div id="forget-tab-email" class="tab-pane tab-body">
+                        <div class="ipt-warpper">
+                            <div class="addon">
+                                <i></i>
+                            </div>
+                            <div class="ipt">
+                                <input type="text" placeholder="Your Email Address">
+                            </div>
+                        </div>
+                        <button class="btn-next" type="button">Next</button>
+                        <p class="tips">Verification code will be sent to your email address</p>
+                    </div>
                 </div>
             </div>
             <div class="or">or</div>
@@ -26,6 +45,161 @@
                 <span>Connect with Facebook</span>
                 <i class="icon-fb"></i>
             </button>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                Cancel
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- 忘记密码第二步 -->
+<div class="modal" id="forget-2" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-content__forget-2">
+            <h4 class="head">Input Your Verification Code</h4>
+            <div class="ipt-code">
+                <input type="text" placeholder="">
+            </div>
+            <div class="re-send-code">
+                <button type="button">Resend Code (60s)</button>
+            </div>
+            <p class="tips">
+                Verification code has been sent to your email address.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- 忘记密码第三步 -->
+<div class="modal" id="forget-3" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-content__forget-3">
+            <h4 class="head">Input Your Verification Code</h4>
+            <div class="ipt-warpper">
+                <div class="addon">
+                    <i></i>
+                </div>
+                <div class="ipt">
+                    <input type="text" placeholder="Set Password">
+                </div>
+            </div>
+            <div class="ipt-warpper">
+                <div class="addon">
+                    <i></i>
+                </div>
+                <div class="ipt">
+                    <input type="text" placeholder="Confirm Password">
+                </div>
+            </div>
+            <div class="btn-reset">
+                <button type="button">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 注册第一步 -->
+<div class="modal" id="reg-1" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-content__reg-1">
+            <h4 class="head">Sign Up</h4>
+            <div class="tab">
+                <div class="nav nav-tabs tab-head">
+                    <a href="#reg-tab-phone" class="tab-head-item active" data-toggle="tab">
+                        Phone Number
+                    </a>
+                    <a href="#reg-tab-email" class="tab-head-item" data-toggle="tab">
+                        Email Address
+                    </a>
+                </div>
+                <div class="tab-content">
+                    <div id="reg-tab-phone" class="tab-pane tab-body active">
+                        <div class="ipt-warpper">
+                            <div class="addon">
+                                <i></i>
+                                <span>ID +62</span>
+                            </div>
+                            <div class="ipt">
+                                <input type="text" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <button class="btn-next" type="button">Next</button>
+                        <p class="tips">Verification code will be sent to your phone number</p>
+                    </div>
+                    <div id="reg-tab-email" class="tab-pane tab-body">
+                        <div class="ipt-warpper">
+                            <div class="addon">
+                                <i></i>
+                            </div>
+                            <div class="ipt">
+                                <input type="text" placeholder="Your Email Address">
+                            </div>
+                        </div>
+                        <button class="btn-next" type="button">Next</button>
+                        <p class="tips">Verification code will be sent to your email address</p>
+                    </div>
+                </div>
+            </div>
+            <div class="or">or</div>
+            <button type="button" class="btn-fb">
+                <span>Connect with Facebook</span>
+                <i class="icon-fb"></i>
+            </button>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+                Cancel
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- 注册第二步 -->
+<div class="modal" id="reg-2" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-content__reg-2">
+            <h4 class="head">Input Your Verification Code</h4>
+            <div class="ipt-code">
+                <input type="text" placeholder="">
+            </div>
+            <div class="re-send-code">
+                <button type="button">Resend Code (60s)</button>
+            </div>
+            <p class="tips">
+                Verification code has been sent to your email address.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- 注册第三步 -->
+<div class="modal" id="reg-3" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content modal-content__reg-3">
+            <div class="head"></div>
+            <div class="ipt-warpper">
+                <div class="addon-before">
+                    <i></i>
+                </div>
+                <div class="ipt">
+                    <input type="text" placeholder="Set Password">
+                </div>
+                <div class="addon-after">
+                    <i></i>
+                </div>
+            </div>
+            <div class="ipt-warpper">
+                <div class="addon-before">
+                    <i></i>
+                </div>
+                <div class="ipt">
+                    <input type="text" placeholder="Confirm Password">
+                </div>
+                <div class="addon-after">
+                    <i></i>
+                </div>
+            </div>
+            <div class="btn-reset">
+                <button type="button">Next</button>
+            </div>
             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                 Cancel
             </button>

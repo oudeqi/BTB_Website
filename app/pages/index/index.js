@@ -16,3 +16,7 @@ $('#cancel').bind('click', function () {
 $('#forgetBtn').bind('click', function () {
     $('#forget-1').modal('show')
 })
+
+$('#regBtn').bind('click', function () {
+    $('#reg-3').modal('show')
+})
