@@ -54,9 +54,6 @@
         justify-content: center;
         i {
           margin-right: 4px;
-          width: 16px;
-          height: 16px;
-          background: #eee;
         }
         span {
           font-size: 12px;
@@ -155,11 +152,6 @@
     margin-right: 6px;
     line-height: 1;
   }
-  .icon-fb {
-    width: 16px;
-    height: 16px;
-    background: #eee;
-  }
 }
 
 .btn-close {
@@ -173,6 +165,62 @@
   &:focus {
     outline: 0;
   }
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon-phone2 {
+  width: 16px;
+  height: 16px;
+  background-image: url("../../assets/img/icon-phone.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.icon-email {
+  width: 16px;
+  height: 16px;
+  background-image: url("../../assets/img/icon-email.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.icon-fb {
+  width: 16px;
+  height: 16px;
+  background-image: url("../../assets/img/icon-fb.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.icon-lock2 {
+  width: 16px;
+  height: 16px;
+  background-image: url("../../assets/img/icon-lock.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.icon-eye {
+  width: 16px;
+  height: 16px;
+  background-image: url("../../assets/img/icon-eye-on.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.icon-eye.off{
+  background-image: url("../../assets/img/icon-eye-off.png");
+}
+.icon-upload-pic {
+  width: 16px;
+  height: 16px;
+  background-image: url("../../assets/img/icon-upload-pic.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 /* 忘记密码第二步 */
@@ -228,17 +276,20 @@
     justify-content: center;
     align-items: center;
     padding: 0 8px;
-    .addon {
+    .addon-before {
       flex-shrink: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       i {
         margin-right: 4px;
-        width: 16px;
-        height: 16px;
-        background: #eee;
       }
+    }
+    .addon-after {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .ipt {
       flex-grow: 1;
@@ -338,6 +389,9 @@
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .ipt-warpper {
     margin-top: 15px;
@@ -356,9 +410,6 @@
       justify-content: center;
       i {
         margin-right: 4px;
-        width: 16px;
-        height: 16px;
-        background: #eee;
       }
     }
     .addon-after {
@@ -366,12 +417,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      i {
-        margin-right: 4px;
-        width: 16px;
-        height: 16px;
-        background: #eee;
-      }
     }
     .ipt {
       flex-grow: 1;

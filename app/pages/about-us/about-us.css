@@ -8,6 +8,7 @@ body {
     background-color: #fff;
     height: 100%;
     min-height: 500px;
+    min-width: $minWidth;
 }
 
 .warpper {
@@ -15,8 +16,13 @@ body {
     margin-bottom: -30px;
     padding-bottom: 30px;
     padding-top: 40px;
+    background-image: url("../../assets/img/about-us-bg.png");
+    background-repeat: no-repeat;
+    background-position: center 40px;
+    background-size: 100% auto;
+}
+.warpper-inner {
     max-width: 950px;
-    min-width: $minWidth;
     margin-left: auto;
     margin-right: auto;
 }
@@ -30,7 +36,8 @@ body {
     text-transform: uppercase;
 }
 .items {
-    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 0;
     padding: 0;
     list-style-type: none;
     li {

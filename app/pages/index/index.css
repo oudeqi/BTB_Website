@@ -38,6 +38,7 @@ body,
 .carousel-inner,
 .carousel-item {
     height: 100%;
+    min-height: 550px;
 }
 .carousel-item {
     overflow: hidden;
@@ -94,7 +95,7 @@ body,
             h3 {
                 font-size: 45px;
                 width: 80%;
-                max-width: 600px;
+                max-width: 640px;
             }
             p {
                 font-size: 16px;
@@ -136,25 +137,44 @@ body,
     padding-right: $boundaryDistance;
     padding-left: $boundaryDistance;
     margin: 0 auto;
-    border: 1px solid #eee;
     height: 100%;
     display: flex;
     align-items: stretch;
 }
 .phone-warpper {
     width: 60%;
-    background: rgba(0,0,0,0.3);
+    position: relative;
+}
+.phone-warpper:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    width: 50%;
+    height: 80%;
+    background-image: url("../../assets/img/phone-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 2;
 }
 .phone-warpper:after {
     content: " ";
     display: block;
-    margin-left: 20%;
-    height: 100%;
-    background-color: pink;
+    position: absolute;
+    top: 15%;
+    right: 0;
+    width: 50%;
+    height: 80%;
+    background-image: url("../../assets/img/phone-2.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    z-index: 1;
 }
 .btn-warpper {
     width: 50%;
-    background: rgba(0,0,0,0.35);
     display: flex;
     justify-content: center;
     align-items: center;

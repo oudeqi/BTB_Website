@@ -2,4 +2,5 @@
 console.log(process.env.NODE_ENV);
 import 'bootstrap/dist/css/bootstrap.css'
 import './news-details.css'
-// "bootstrap": "^4.0.0",
+import 'bootstrap'
+import '../../components/modal/modal.js'

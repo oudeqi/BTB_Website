@@ -8,6 +8,7 @@ body {
     background-color: #fff;
     height: 100%;
     min-height: 500px;
+    min-width: $minWidth;
 }
 
 .warpper {
@@ -15,19 +16,22 @@ body {
     margin-bottom: -30px;
     padding-bottom: 30px;
     padding-top: 40px;
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
+    background-image: url("../../assets/img/about-bali-bg.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
     display: flex;
     align-items: center;
     position: relative;
 }
+.warpper-inner {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .tit {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100%;
-    padding: 0 20px;
+    padding: 0 60px;
     text-align: right;
     color: rgb(74, 74, 74);
     font-size: 30px;

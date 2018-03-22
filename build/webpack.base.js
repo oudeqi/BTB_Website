@@ -11,7 +11,7 @@ const { NODE_ENV, PUBLIC_PATH } = require('../config');
 require('nodemon')('./dyson_services/index.js');
 
 let entry = require('./entry');
-let vendor = NODE_ENV === 'production' ? { vendor: ['jquery', 'bootstrap', 'bootstrap/dist/css/bootstrap.css'] } : {}
+let vendor = NODE_ENV === 'production' ? { vendor: ['jquery', 'bootstrap'] } : {}
 
 module.exports = {
     // context: path.resolve(__dirname, '..', 'app'),
@@ -56,9 +56,9 @@ module.exports = {
                         options: {
                             config: {
                                 path: 'postcss.config.js',
-                                // ctx: {
-                                //     autoprefixer: {browsers: ['> 1%']}
-                                // }
+                                ctx: {
+                                    autoprefixer: {browsers: ['> 1%']}
+                                }
                             }
                         }
                     }],
@@ -94,6 +94,11 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
+            /* Note that using Bootstrap 4.0.0-alpha.6,
+            Bootstrap is no longer checking for "window.Tether"
+            but the global variable "Tether", so the webpack configuration becomes */
+            'Tether': 'tether',
+            'window.Tether': 'tether'
         }),
         new webpack.DefinePlugin({
             'process.env': {

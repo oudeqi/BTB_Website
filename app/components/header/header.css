@@ -222,11 +222,14 @@
     }
 }
 
-.profile-head-icon {
+.profile-head__edit {
     display: block;
     width: 16px;
     height: 16px;
-    background: #eee;
+    background-image: url("../../assets/img/icon-edit.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 .profile-item {

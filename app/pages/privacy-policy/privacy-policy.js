@@ -2,3 +2,5 @@
 console.log(process.env.NODE_ENV);
 import 'bootstrap/dist/css/bootstrap.css'
 import './privacy-policy.css'
+import 'bootstrap'
+import '../../components/modal/modal.js'
