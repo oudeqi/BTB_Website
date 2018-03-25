@@ -63,3 +63,14 @@
         }
     }
 }
+
+.news-list__loading {
+    text-align: center;
+    padding-bottom: 20px;
+    color: #ccc;
+    width: 100%;
+    display: none;
+    a {
+        color: inherit;
+    }
+}

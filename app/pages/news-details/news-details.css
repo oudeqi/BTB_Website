@@ -1,9 +1,14 @@
 @import "../../assets/css/_variable.css";
+@import "../../assets/css/base.css";
 @import "../../components/header/header.css";
 @import "../../components/giant-screen/giant-screen.css";
 @import "../../components/category/category.css";
 @import "../../components/news-list/news-list.css";
 @import "../../components/footer/footer.css";
+
+html, body {
+    height: 100%;
+}
 
 .news-details {
     max-width: $maxWidth;
@@ -14,7 +19,11 @@
     display: flex;
     padding-top: 45px;
 }
-
+.layer-warpper {
+    min-height: 100%;
+    margin-bottom: -30px;
+    padding-bottom: 30px;
+}
 .news-details__pic {
     width: 33%;
     min-width: 250px;

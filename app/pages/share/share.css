@@ -1,4 +1,5 @@
 @import "../../assets/css/_variable.css";
+@import "../../assets/css/base.css";
 
 .product-container {
     min-width: 320px;

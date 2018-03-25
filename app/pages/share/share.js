@@ -4,15 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './share.css'
 import accounting from 'accounting'
 import { BASE_URL } from '../config'
-
-const getQueryString = function (name) {
-    let reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i'),
-        r = window.location.search.substr(1).match(reg);
-    if (r != null) {
-        return decodeURIComponent(r[2]);
-    }
-    return null;
-}
+import { getQueryString } from '../utils'
 
 let id = getQueryString('id')
 let pageData = null
@@ -32,7 +24,7 @@ if (!id) {
             $('#page-warpper').html(`
                 <div class="product__video">
                     <div class="product__video--warpper">
-                        <video class="video" controls src="${pageData.video}" poster="${pageData.picture}">
+                        <video class="video" controls src="${pageData.video.indexOf('http://') === 1 ? pageData.video : ('http://' + pageData.video)}" poster="${pageData.picture}">
                             Your browser does not support the video tag.
                         </video>
                     </div>

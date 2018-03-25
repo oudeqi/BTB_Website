@@ -2,10 +2,20 @@
 
 .giant-screen {
     width: 100%;
+    background-color: #eee;
+    background-image: url("../../assets/img/giant-screen.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    padding-bottom: 20px;
     min-width: $minWidth;
-    img {
-        display: block;
-        width: 100%;
-        height: auto;
+    .warrpper {
+        max-width: $maxWidth;
+        margin: 0 auto;
+        padding-left: 30px;
+        img {
+            width: 180px;
+        }
     }
 }
