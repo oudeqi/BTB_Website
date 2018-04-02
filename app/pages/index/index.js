@@ -11,7 +11,7 @@ import '../../components/modal/modal.js'
 $('[data-target="index"]').addClass('active')
 
 $('#cancel').bind('click', function () {
-    $('.dropdown-login').dropdown('toggle');
+    $('.dropdown-login').dropdown('toggle')
 })
 
 $('#forgetBtn').bind('click', function () {
@@ -39,27 +39,32 @@ $.get(BASE_URL + '/commodity/admin/list', {
             $('.best-choice__items').html('')
             arr.forEach(item => {
                 $('.best-choice__items').append(`
-                <li class="item">
-                    <div class="inner">
-                        <div class="pic">
-                            <a href="./product-details.html?id=${item.id}">
-                                <img src="${item.picture}" alt="">
-                            </a>
+                    <li class="item">
+                        <div class="inner">
+                            <div class="pic">
+                                <a href="./product-details.html?id=${item.id}">
+                                    <img src="${item.picture}" alt="">
+                                </a>
+                            </div>
+                            <div class="txt">
+                                <h3>${item.name}</h3>
+                                <p>
+                                    <a href="${item.booking}">Booking Via Website</a>
+                                </p>
+                                <p><span>Rp. ${accounting.formatNumber(item.price)}</span></p>
+                            </div>
                         </div>
-                        <div class="txt">
-                            <h3>${item.name}</h3>
-                            <p>
-                                <a href="${item.booking}">Booking Via Website</a>
-                            </p>
-                            <p><span>Rp. ${accounting.formatNumber(item.price)}</span></p>
-                        </div>
-                    </div>
-                </li>
-            `)
+                    </li>
+                `)
             })
         }
     } else {
         $('.best-choice__items').html('<li style="text-align: center;color: #ddd;">no data</li>')
+    }
+    if (location.href.indexOf('#download') !== -1) {
+        setTimeout(() => {
+            document.getElementById('download').scrollIntoView()
+        }, 60)
     }
 }).fail(function (error) {
     console.log(error)
@@ -98,6 +103,11 @@ $.get(BASE_URL + '/news/list', {
         }
     } else {
         $('.news-list__items').html('<li style="text-align: center;color: #ddd;">no data</li>')
+    }
+    if (location.href.indexOf('#download') !== -1) {
+        setTimeout(() => {
+            document.getElementById('download').scrollIntoView()
+        }, 60)
     }
 }).fail(function (error) {
     console.log(error)

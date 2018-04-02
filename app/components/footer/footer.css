@@ -16,7 +16,8 @@
 		span{
 			display: inline-block;
 			margin-left: 10px;
-			font-size: 12px;
+			font-size: 13px;
+			max-height: 100%;
 		}
 	}
 }

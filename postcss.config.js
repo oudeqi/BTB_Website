@@ -27,13 +27,13 @@ module.exports = function({file, options, env}){
 			// --'postcss-vmin': {},//给不支持vmin的ie9作降级处理
 			'postcss-calc': {},//尽可能让calc输出静态的值
 			'postcss-aspect-ratio-mini': {},//长宽比效果
-			// 'postcss-px2rem': {
-			// 	remUnit: 32
-			// },//px转rem
+			'postcss-px2rem': {
+				remUnit: 14
+			},//px转rem
 			'postcss-functions': {
 				functions: {
 			        px2rem: function (int) {
-			        	return parseFloat(parseInt(int) / 32) + 'rem';
+			        	return parseFloat(parseInt(int) / 14) + 'rem';
 			        },
 			        px2em: function (int, base) {
 			        	return parseFloat(parseInt(int) / (base || 18)) + 'em';

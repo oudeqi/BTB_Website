@@ -16,13 +16,13 @@
     font-weight: 900;
 }
 
-body{
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    font-family: Calibre, "Helvetica Neue", Arial, sans-serif;
+html, body {
     font-size: responsive;
     lower-font-range: $minWidth;
     upper-font-range: $maxWidth;
-    min-font-size: 14px;
-    max-font-size: 18px;
+    min-font-size: 0.875rem;
+    max-font-size: 1.125rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Calibre, "Helvetica Neue", Arial, sans-serif;
 }

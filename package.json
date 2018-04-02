@@ -64,6 +64,6 @@
     "accounting": "^0.4.1",
     "bootstrap": "^4.0.0-alpha.6",
     "jquery": "^2.2.4",
-    "popper.js": "^1.12.9"
+    "popper.js": "^1.14.1"
   }
 }
