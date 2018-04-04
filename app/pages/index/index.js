@@ -1,5 +1,5 @@
 // __webpack_public_path__ = process.env.PUBLIC_PATH;
-import {BASE_URL} from "../config";
+import { BASE_URL } from "../config";
 
 console.log(process.env.NODE_ENV);
 import 'bootstrap/dist/css/bootstrap.css'
@@ -7,20 +7,9 @@ import './index.css'
 import 'bootstrap'
 import accounting from 'accounting'
 import '../../components/modal/modal.js'
+import '../../components/header/header.js'
 
 $('[data-target="index"]').addClass('active')
-
-$('#cancel').bind('click', function () {
-    $('.dropdown-login').dropdown('toggle')
-})
-
-$('#forgetBtn').bind('click', function () {
-    $('#forget-3').modal('show')
-})
-
-$('#regBtn').bind('click', function () {
-    $('#reg-3').modal('show')
-})
 
 // 推荐商品
 $.get(BASE_URL + '/commodity/admin/list', {
@@ -64,7 +53,7 @@ $.get(BASE_URL + '/commodity/admin/list', {
     if (location.href.indexOf('#download') !== -1) {
         setTimeout(() => {
             document.getElementById('download').scrollIntoView()
-        }, 60)
+        }, 150)
     }
 }).fail(function (error) {
     console.log(error)
@@ -107,7 +96,7 @@ $.get(BASE_URL + '/news/list', {
     if (location.href.indexOf('#download') !== -1) {
         setTimeout(() => {
             document.getElementById('download').scrollIntoView()
-        }, 60)
+        }, 150)
     }
 }).fail(function (error) {
     console.log(error)

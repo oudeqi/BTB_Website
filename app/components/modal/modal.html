@@ -1,5 +1,5 @@
 <!-- 忘记密码第一步 -->
-<div class="modal" id="forget-1" tabindex="-1" role="dialog">
+<div class="modal" id="forget-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content modal-content__forget-1">
             <h4 class="head">Sign Up</h4>
@@ -53,7 +53,7 @@
 </div>
 
 <!-- 忘记密码第二步 -->
-<div class="modal" id="forget-2" tabindex="-1" role="dialog">
+<div class="modal" id="forget-2" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content modal-content__forget-2">
             <h4 class="head">Input Your Verification Code</h4>
@@ -71,7 +71,7 @@
 </div>
 
 <!-- 忘记密码第三步 -->
-<div class="modal" id="forget-3" tabindex="-1" role="dialog">
+<div class="modal" id="forget-3" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content modal-content__forget-3">
             <h4 class="head">Input Your Verification Code</h4>
@@ -105,10 +105,12 @@
 </div>
 
 <!-- 注册第一步 -->
-<div class="modal" id="reg-1" tabindex="-1" role="dialog">
+<div class="modal" id="reg-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content modal-content__reg-1">
-            <h4 class="head">Sign Up</h4>
+            <h2 class="head">
+                Sign Up
+            </h2>
             <div class="tab">
                 <div class="nav nav-tabs tab-head">
                     <a href="#reg-tab-phone" class="tab-head-item active" data-toggle="tab">
@@ -129,7 +131,7 @@
                                 <input type="text" placeholder="Phone Number">
                             </div>
                         </div>
-                        <button class="btn-next" type="button">Next</button>
+                        <button class="btn-next js_toRegStep2" type="button">Next</button>
                         <p class="tips">Verification code will be sent to your phone number</p>
                     </div>
                     <div id="reg-tab-email" class="tab-pane tab-body">
@@ -141,7 +143,7 @@
                                 <input type="text" placeholder="Your Email Address">
                             </div>
                         </div>
-                        <button class="btn-next" type="button">Next</button>
+                        <button class="btn-next js_toRegStep2" type="button">Next</button>
                         <p class="tips">Verification code will be sent to your email address</p>
                     </div>
                 </div>
@@ -159,17 +161,17 @@
 </div>
 
 <!-- 注册第二步 -->
-<div class="modal" id="reg-2" tabindex="-1" role="dialog">
+<div class="modal" id="reg-2" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content modal-content__reg-2">
             <h4 class="head">Input Your Verification Code</h4>
             <div class="ipt-code">
-                <input type="text" placeholder="">
+                <input type="text" id="regCode" placeholder="">
             </div>
             <div class="re-send-code">
-                <button type="button">Resend Code (60s)</button>
+                <button type="button" id="ResendCode">Resend Code (60s)</button>
             </div>
-            <p class="tips">
+            <p class="tips" id="reg-2-tips">
                 Verification code has been sent to your email address.
             </p>
         </div>
@@ -177,18 +179,18 @@
 </div>
 
 <!-- 注册第三步 -->
-<div class="modal" id="reg-3" tabindex="-1" role="dialog">
+<div class="modal" id="reg-3" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content modal-content__reg-3">
-            <div class="head">
-                <i class="icon icon-upload-pic"></i>
+            <div class="head" id="avatarView">
+                <input type="file" id="avatar" name="avatar">
             </div>
             <div class="ipt-warpper">
                 <div class="addon-before">
                     <i class="icon icon-lock2"></i>
                 </div>
                 <div class="ipt">
-                    <input type="text" placeholder="Set Password">
+                    <input type="text" id="SetPassword" placeholder="Set Password">
                 </div>
                 <div class="addon-after">
                     <a href="javascript:void(0);" class="icon icon-eye"></a>
@@ -199,14 +201,14 @@
                     <i class="icon icon-lock2"></i>
                 </div>
                 <div class="ipt">
-                    <input type="text" placeholder="Confirm Password">
+                    <input type="text" id="ConfirmPassword" placeholder="Confirm Password">
                 </div>
                 <div class="addon-after">
                     <a href="javascript:void(0);" class="icon icon-eye off"></a>
                 </div>
             </div>
             <div class="btn-reset">
-                <button type="button">Next</button>
+                <button type="button" id="regModalBtn">Next</button>
             </div>
             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
                 Cancel

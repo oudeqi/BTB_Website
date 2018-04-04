@@ -6,3 +6,7 @@ export function getQueryString (name) {
     }
     return null;
 }
+
+export function isEmail (str) {
+	return /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(str)
+}

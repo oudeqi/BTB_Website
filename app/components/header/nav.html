@@ -11,15 +11,15 @@
     <li class="nav-item" data-target="download">
         <a href="./index.html#download" class="link">Download Apps</a>
     </li>
-    <li class="nav-item dropdown" data-target="login">
+    <li class="nav-item dropdown" data-target="login" id="nav-item-login">
         <a href="javascript:void(0);" class="link dropdown-login" data-toggle="dropdown">Log In</a>
         <form class="dropdown-menu dropdown-menu-right form-login">
             <h4>Log In</h4>
             <div class="login-ipt-warpper">
-                <input type="text" placeholder="Email / Phone Number">
+                <input id="name" type="text" placeholder="Email / Phone Number">
             </div>
             <div class="login-ipt-warpper">
-                <input type="password" placeholder="Password">
+                <input id=pwd type="password" placeholder="Password">
                 <a href="javascript:void(0);" class="icon"></a>
             </div>
             <p>
@@ -27,32 +27,34 @@
                 <a href="javascript:void(0);" id="forgetBtn">Forgot Password?</a>
             </p>
             <div class="login-btn-warpper">
-                <button type="button" class="btn-login">Log In</button>
+                <button id="login" type="button" class="btn-login">Log In</button>
             </div>
             <div class="login-btn-warpper">
-                <button type="button" class="btn-cancel" id="cancel">Cancel</button>
+                <button id="cancel" type="button" class="btn-cancel">Cancel</button>
             </div>
         </form>
     </li>
-    <li class="nav-item dropdown" data-target="myProfile">
-        <a href="javascript:void(0);" class="link dropdown-profile" data-toggle="dropdown">My Profile</a>
-        <form class="dropdown-menu dropdown-menu-right profile">
-            <div class="profile-head">
-                <div class="profile-head-pic">
-                    <img src="" alt="">
+    <li class="nav-item" id="myProfile">
+        <!-- <div class="dropdown" data-target="myProfile">
+            <a href="javascript:void(0);" class="link dropdown-profile" data-toggle="dropdown">My Profile</a>
+            <form class="dropdown-menu dropdown-menu-right profile">
+                <div class="profile-head">
+                    <div class="profile-head-pic">
+                        <img src="" alt="">
+                    </div>
+                    <div class="profile-head-info">
+                        <p class="name">btbtourism</p>
+                        <p class="phone">+62 81289826272</p>
+                        <p class="email">btbtourism@gmail.com</p>
+                    </div>
+                    <a class="profile-head__edit" href="javascript:void(0);"></a>
                 </div>
-                <div class="profile-head-info">
-                    <p class="name">btbtourism</p>
-                    <p class="phone">+62 81289826272</p>
-                    <p class="email">btbtourism@gmail.com</p>
-                </div>
-                <a class="profile-head__edit" href="javascript:void(0);"></a>
-            </div>
-            <a class="profile-item" href="javascript:void(0);">Change Password</a>
-            <a class="profile-item" href="javascript:void(0);">Change Phone Number</a>
-            <a class="profile-item" href="./terms-conditions.html">Terms of Service</a>
-            <a class="profile-item" href="./privacy-policy.html">Privacy Policy</a>
-            <a class="profile-item" href="javascript:void(0);">Log Out</a>
-        </form>
+                <a class="profile-item" href="javascript:void(0);">Change Password</a>
+                <a class="profile-item" href="javascript:void(0);">Change Phone Number</a>
+                <a class="profile-item" href="./terms-conditions.html">Terms of Service</a>
+                <a class="profile-item" href="./privacy-policy.html">Privacy Policy</a>
+                <a class="profile-item" href="javascript:void(0);">Log Out</a>
+            </form>
+        </div> -->
     </li>
 </ul>

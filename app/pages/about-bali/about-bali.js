@@ -2,6 +2,7 @@
 console.log(process.env.NODE_ENV);
 import 'bootstrap/dist/css/bootstrap.css'
 import './about-bali.css'
-import 'bootstrap'
 import '../../components/modal/modal.js'
+import '../../components/header/header.js'
+
 $('[data-target="aboutBali"]').addClass('active')
