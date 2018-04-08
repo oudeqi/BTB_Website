@@ -7,6 +7,7 @@ import './best-choice.css'
 import 'bootstrap'
 import accounting from 'accounting'
 import '../../components/modal/modal.js'
+import '../../components/header/header.js'
 
 let pageIndex = 1
 let pageTotal = null

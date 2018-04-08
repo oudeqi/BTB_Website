@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './news.css'
 import 'bootstrap'
 import '../../components/modal/modal.js'
+import '../../components/header/header.js'
 
 let pageIndex = 1
 let pageTotal = null

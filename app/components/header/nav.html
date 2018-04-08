@@ -1,38 +1,48 @@
 <ul class="nav-bar__nav">
     <li class="nav-item" data-target="index">
-        <a href="./index.html" class="link">Home</a>
+        <div class="dropdown">
+            <a href="./index.html" class="link">Home</a>
+        </div>
     </li>
     <li class="nav-item" data-target="aboutUs">
-        <a href="./about-us.html" class="link">About Us</a>
+        <div class="dropdown">
+            <a href="./about-us.html" class="link">About Us</a>
+        </div>
     </li>
     <li class="nav-item" data-target="aboutBali">
-        <a href="./about-bali.html" class="link">About Bali</a>
+        <div class="dropdown">
+            <a href="./about-bali.html" class="link">About Bali</a>
+        </div>
     </li>
     <li class="nav-item" data-target="download">
-        <a href="./index.html#download" class="link">Download Apps</a>
+        <div class="dropdown">
+            <a href="./index.html#download" class="link">Download Apps</a>
+        </div>
     </li>
-    <li class="nav-item dropdown" data-target="login" id="nav-item-login">
-        <a href="javascript:void(0);" class="link dropdown-login" data-toggle="dropdown">Log In</a>
-        <form class="dropdown-menu dropdown-menu-right form-login">
-            <h4>Log In</h4>
-            <div class="login-ipt-warpper">
-                <input id="name" type="text" placeholder="Email / Phone Number">
-            </div>
-            <div class="login-ipt-warpper">
-                <input id=pwd type="password" placeholder="Password">
-                <a href="javascript:void(0);" class="icon"></a>
-            </div>
-            <p>
-                <a href="javascript:void(0);" id="regBtn">Sign Up</a>
-                <a href="javascript:void(0);" id="forgetBtn">Forgot Password?</a>
-            </p>
-            <div class="login-btn-warpper">
-                <button id="login" type="button" class="btn-login">Log In</button>
-            </div>
-            <div class="login-btn-warpper">
-                <button id="cancel" type="button" class="btn-cancel">Cancel</button>
-            </div>
-        </form>
+    <li class="nav-item" data-target="login" id="nav-item-login">
+        <!-- <div class="dropdown">
+            <a href="javascript:void(0);" class="link dropdown-login" data-toggle="dropdown">Log In</a>
+            <form class="dropdown-menu dropdown-menu-right form-login">
+                <h4>Log In</h4>
+                <div class="login-ipt-warpper">
+                    <input id="name" type="text" placeholder="Email / Phone Number">
+                </div>
+                <div class="login-ipt-warpper">
+                    <input id=pwd type="password" placeholder="Password">
+                    <a href="javascript:void(0);" class="icon"></a>
+                </div>
+                <p>
+                    <a href="javascript:void(0);" id="regBtn">Sign Up</a>
+                    <a href="javascript:void(0);" id="forgetBtn">Forgot Password?</a>
+                </p>
+                <div class="login-btn-warpper">
+                    <button id="login" type="button" class="btn-login">Log In</button>
+                </div>
+                <div class="login-btn-warpper">
+                    <button id="cancel" type="button" class="btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </div> -->
     </li>
     <li class="nav-item" id="myProfile">
         <!-- <div class="dropdown" data-target="myProfile">

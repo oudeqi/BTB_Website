@@ -7,6 +7,13 @@ let regData = {
 	avatar: null
 }
 
+let userInfo = JSON.parse(localStorage.getItem('userInfo'))
+if (userInfo) {
+	showProfile(userInfo)
+} else {
+	showLogin()
+}
+
 $('#cancel').bind('click', function () {
     $('.dropdown-login').dropdown('toggle')
 })
@@ -168,6 +175,11 @@ $('#regModalBtn').click(function(e){
     })
 })
 
+$(document).on('click', '#Logout', function(){
+	localStorage.removeItem('userInfo')
+	location.reload()
+})
+
 
 $('#login').click(function(e){
 	e.preventDefault()
@@ -187,33 +199,7 @@ $('#login').click(function(e){
 			let info = res.data.user
 			$('#nav-item-login').remove()
 			localStorage.setItem('userInfo', JSON.stringify(info))
-			$('#myProfile').html(`
-				<div class="dropdown" data-target="myProfile">
-		            <a href="javascript:void(0);" class="link dropdown-profile" data-toggle="dropdown">My Profile</a>
-		            <form class="dropdown-menu dropdown-menu-right profile">
-		                <div class="profile-head">
-		                    <div class="profile-head-pic">
-		                        <img src="${info.picture}" alt="">
-		                    </div>
-		                    <div class="profile-head-info">
-		                    	${((info) => {
-		                    		if (info.signup_type === 'phone') {
-		                    			return `<p class="phone">${info.phone}</p>`
-		                    		} else {
-		                    			return `<p class="phone">${info.email}</p>`
-		                    		}
-		                    	})(info)}
-		                    </div>
-		                    <a class="profile-head__edit" href="javascript:void(0);"></a>
-		                </div>
-		                <a class="profile-item" href="javascript:void(0);">Change Password</a>
-		                <a class="profile-item" href="javascript:void(0);">Change Phone Number</a>
-		                <a class="profile-item" href="./terms-conditions.html">Terms of Service</a>
-		                <a class="profile-item" href="./privacy-policy.html">Privacy Policy</a>
-		                <a class="profile-item" href="javascript:void(0);">Log Out</a>
-		            </form>
-		        </div>
-			`)
+			showProfile(info)
 		} else {
 			alert(res.message)
 		}
@@ -221,3 +207,61 @@ $('#login').click(function(e){
 		alert('error')
 	})
 })
+
+function showProfile (info) {
+	$('#myProfile').html(`
+		<div class="dropdown" data-target="myProfile">
+            <a href="javascript:void(0);" class="link dropdown-profile" data-toggle="dropdown">My Profile</a>
+            <form class="dropdown-menu dropdown-menu-right profile">
+                <div class="profile-head">
+                    <div class="profile-head-pic">
+                        <img src="${info.picture}" alt="">
+                    </div>
+                    <div class="profile-head-info">
+                    	${((info) => {
+                    		if (info.signup_type === 'phone') {
+                    			return `<p class="phone">${info.phone}</p>`
+                    		} else {
+                    			return `<p class="phone">${info.email}</p>`
+                    		}
+                    	})(info)}
+                    </div>
+                    <a class="profile-head__edit" href="javascript:void(0);"></a>
+                </div>
+                <a class="profile-item" href="javascript:void(0);">Change Password</a>
+                <a class="profile-item" href="javascript:void(0);">Change Phone Number</a>
+                <a class="profile-item" href="./terms-conditions.html">Terms of Service</a>
+                <a class="profile-item" href="./privacy-policy.html">Privacy Policy</a>
+                <a id="Logout" class="profile-item" href="javascript:void(0);">Log Out</a>
+            </form>
+        </div>
+	`)
+}
+
+function showLogin () {
+	$('#nav-item-login').html(`
+		<div class="dropdown">
+            <a href="javascript:void(0);" class="link dropdown-login" data-toggle="dropdown">Log In</a>
+            <form class="dropdown-menu dropdown-menu-right form-login">
+                <h4>Log In</h4>
+                <div class="login-ipt-warpper">
+                    <input id="name" type="text" placeholder="Email / Phone Number">
+                </div>
+                <div class="login-ipt-warpper">
+                    <input id=pwd type="password" placeholder="Password">
+                    <a href="javascript:void(0);" class="icon"></a>
+                </div>
+                <p>
+                    <a href="javascript:void(0);" id="regBtn">Sign Up</a>
+                    <a href="javascript:void(0);" id="forgetBtn">Forgot Password?</a>
+                </p>
+                <div class="login-btn-warpper">
+                    <button id="login" type="button" class="btn-login">Log In</button>
+                </div>
+                <div class="login-btn-warpper">
+                    <button id="cancel" type="button" class="btn-cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+	`)
+}

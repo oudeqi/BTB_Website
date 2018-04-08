@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './product-details.css'
 import 'bootstrap'
 import '../../components/modal/modal.js'
+import '../../components/header/header.js'
 import accounting from 'accounting'
 import { getQueryString } from '../utils'
 

@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import './news-details.css'
 import 'bootstrap'
 import '../../components/modal/modal.js'
+import '../../components/header/header.js'
 import { getQueryString } from '../utils'
 
 let id = getQueryString('id')

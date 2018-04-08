@@ -43,14 +43,19 @@
     align-items: stretch;
     flex-shrink: 0;
     .nav-item {
-        display: flex;
-        align-items: center;
-        margin: 0 12px;
-        padding: 0 1px;
+        height: 100%;
         font-size: 14px;
         color: #fff;
         border-bottom: 0;
+        .dropdown{
+            height: 100%;
+            margin: 0 12px;
+            padding: 0 1px;
+        }
         .link {
+            height: 100%;
+            display: flex;
+            align-items: center;
             color: #fff;
             text-transform: capitalize;
             text-decoration: none;
@@ -58,7 +63,7 @@
                  color: #ededed;
              }
         }
-        &.active {
+        &.active .dropdown{
              border-bottom: 2px solid rgb(255, 255, 255);
         }
     }
@@ -208,11 +213,11 @@
     background: #eee;
     flex-shrink: 0;
     margin-right: 10px;
+    overflow: hidden;
     cursor: pointer;
     img {
         max-width: 100%;
         max-height: 100%;
-        display: block;
     }
 }
 
@@ -229,7 +234,7 @@
         line-height: 1.5;
     }
     .phone {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 1;
     }
     .email {
