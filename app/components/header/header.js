@@ -64,7 +64,6 @@ $('.js_toRegStep2').click(function(e){
 			verify_value: regData.regID
 		}).done(function(data){
 			let res = JSON.parse(data)
-			console.log('res')
 			console.log(res)
 			if (res.code === 200) {
 				regData.regCode = res.data.verificationcode
