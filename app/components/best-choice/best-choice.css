@@ -84,6 +84,7 @@
     color: #ccc;
     width: 100%;
     display: none;
+    font-size: 14px;
     a {
         color: inherit;
     }

@@ -13,6 +13,9 @@ body {
 .footer-container {
     background: rgba(74,74,74,.38);
     min-width: $minWidth;
+    overflow: hidden;
+    transition: all .8s ease;
+    transform: translateY(0);
     .footer-bar {
         max-width: $maxWidth;
         padding-right: $boundaryDistance;
@@ -30,6 +33,10 @@ body {
             font-size: 13px;
         }
     }
+}
+
+.footer-container.hide {
+    transform: translateY(40px);
 }
 
 html,

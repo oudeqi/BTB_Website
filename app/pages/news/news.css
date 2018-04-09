@@ -6,7 +6,7 @@
 @import "../../components/news-list/news-list.css";
 @import "../../components/footer/footer.css";
 
-html,
+html, 
 body {
     height: 100%;
 }

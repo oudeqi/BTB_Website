@@ -28,7 +28,7 @@ module.exports = function({file, options, env}){
 			'postcss-calc': {},//尽可能让calc输出静态的值
 			'postcss-aspect-ratio-mini': {},//长宽比效果
 			'postcss-px2rem': {
-				remUnit: 14
+				remUnit: 14 //如果不需要转换，在样式规则后面加：/*no*/
 			},//px转rem
 			'postcss-functions': {
 				functions: {

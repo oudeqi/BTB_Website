@@ -10,44 +10,40 @@ import '../../components/modal/modal.js'
 import '../../components/header/header.js'
 
 let pageIndex = 1
-let pageTotal = null
-let loading = false //false 未加载或者加载完成显示more，true加载中显示loading
+let pageTotal = 1
+let pageSize = 20
+let loading = false
 
 function getList() {
-    console.log('init')
     console.log(pageIndex, pageTotal)
-    if (pageIndex === pageTotal) {
-        $('.best-choice__loading').html('no more').show()
+    if (pageIndex > pageTotal) {
+        $('.best-choice__loading').html('No More').show()
         return
     }
-    console.log('load')
     loading = true
-    $('.best-choice__loading').html('Loading')
-    setTimeout(function () {
+    setTimeout(function(){
         if (loading) {
-            $('.best-choice__loading').show()
-        } else {
-            $('.best-choice__loading').html('<a class="btn-more" href="javascript:void(0);">More</a>').show()
+            $('.best-choice__loading').html('Loading').show()
         }
     }, 300)
     $.get(BASE_URL + '/commodity/admin/list', {
-        page_size: 20,
+        page_size: pageSize,
         page_index: pageIndex
     }).done(function(result){
         loading = false
         let res = JSON.parse(result)
-        console.log(res)
         if (res.code === 200) {
-            let arr = res.data.commodity.data
             pageTotal = parseInt(res.data.commodity.page_total)
-            if (pageIndex < pageTotal ) {
-                pageIndex = parseInt(res.data.news_list.page_index) + 1
-            }
-            console.log('prod', arr)
-            if (arr.length === 0) {
-                $('.best-choice__items').html('<li style="text-align: center;color: #ddd;">no data</li>')
+            if (pageIndex === pageTotal) {
+                $('.best-choice__loading').html('No More').show()
             } else {
-                $('.best-choice__items').html('')
+                $('.best-choice__loading').html('<a class="btn-more" href="javascript:void(0);">More</a>').show()
+            }
+            pageIndex = parseInt(res.data.commodity.page_index) + 1
+            let arr = res.data.commodity.data
+            if (arr.length === 0) {
+                $('.best-choice__loading').html('No Data').show()
+            } else {
                 arr.forEach(item => {
                     $('.best-choice__items').append(`
                         <li class="item">
@@ -68,9 +64,17 @@ function getList() {
                         </li>
                     `)
                 })
+                let scrollTop = $(window).scrollTop()
+                let navHeight = $('.js_nav').height()
+                let categoryOffsetTop = $('.js_category').offset().top
+                if ((scrollTop + navHeight) >= categoryOffsetTop) {
+                    $('.js_nav').addClass('dark')
+                } else {
+                    $('.js_nav').removeClass('dark')
+                }
             }
         } else {
-            $('.best-choice__items').html('<li style="text-align: center;color: #ddd;">no data</li>')
+            alert(res.data.commodity.message)
         }
     }).fail(function (error) {
         loading = false
@@ -90,6 +94,17 @@ $(window).bind('scroll', function () {
     }
 })
 
-$('body').on('click', '.btn-more', function () {
+$(document).on('click', '.btn-more', function () {
     getList()
+})
+
+$(window).bind('scroll', function () {
+    let scrollTop = $(window).scrollTop()
+    let navHeight = $('.js_nav').height()
+    let categoryOffsetTop = $('.js_category').offset().top
+    if ((scrollTop + navHeight) >= categoryOffsetTop) {
+        $('.js_nav').addClass('dark')
+    } else {
+        $('.js_nav').removeClass('dark')
+    }
 })

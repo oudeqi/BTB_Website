@@ -1,4 +1,6 @@
 
 $maxWidth: 1200px;
 $minWidth: 768px;
+$minFontSize: 0.875rem;
+$maxFontSize: 1.0625rem;
 $boundaryDistance: 30px;

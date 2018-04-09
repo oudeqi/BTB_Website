@@ -5,11 +5,11 @@
 .nav-container {
     background: rgba(74,74,74,.38);
     min-width: $minWidth;
+    transition: background .8s ease;
 }
 
-.dark-nav-container {
+.nav-container.dark {
     background: rgb(74,74,74);
-    min-width: $minWidth;
 }
 
 .nav-bar {
@@ -61,10 +61,11 @@
             text-decoration: none;
             &:hover {
                  color: #ededed;
-             }
+                 border-bottom: 2px solid rgb(255, 255, 255);
+            }
         }
-        &.active .dropdown{
-             border-bottom: 2px solid rgb(255, 255, 255);
+        &.active .dropdown .link{
+            border-bottom: 2px solid rgb(255, 255, 255);
         }
     }
 }
@@ -229,16 +230,16 @@
         color: rgb(74, 74, 74);
     }
     .name {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: bold;
         line-height: 1.5;
     }
     .phone {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 1;
     }
     .email {
-        font-size: 12px;
+        font-size: 15px;
         line-height: 1;
     }
 }
@@ -256,7 +257,7 @@
 .profile-item {
     display: block;
     width: 100%;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: rgb(74, 74, 74);
     height: 30px;

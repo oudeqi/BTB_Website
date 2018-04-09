@@ -62,6 +62,14 @@ if (!id) {
             $('.play').bind('click', function () {
                 $('.video')[0].play()
             })
+            let scrollTop = $(window).scrollTop()
+            let navHeight = $('.js_nav').height()
+            let categoryOffsetTop = $('.js_category').offset().top
+            if ((scrollTop + navHeight) >= categoryOffsetTop) {
+                $('.js_nav').addClass('dark')
+            } else {
+                $('.js_nav').removeClass('dark')
+            }
         }
     }).fail(function (error) {
         $('.product-container').html(`
@@ -69,3 +77,14 @@ if (!id) {
          `)
     })
 }
+
+$(window).bind('scroll', function () {
+    let scrollTop = $(this).scrollTop()
+    let navHeight = $('.js_nav').height()
+    let categoryOffsetTop = $('.js_category').offset().top
+    if ((scrollTop + navHeight) >= categoryOffsetTop) {
+        $('.js_nav').addClass('dark')
+    } else {
+        $('.js_nav').removeClass('dark')
+    }
+})

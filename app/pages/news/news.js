@@ -9,43 +9,40 @@ import '../../components/modal/modal.js'
 import '../../components/header/header.js'
 
 let pageIndex = 1
-let pageTotal = null
+let pageTotal = 1
+let pageSize = 20
 let loading = false
 
 function getList() {
-    console.log('init')
-    if (pageIndex === pageTotal) {
-        $('.news-list__loading').html('no more').show()
+    console.log(pageIndex, pageTotal)
+    if (pageIndex > pageTotal) {
+        $('.news-list__loading').html('No More').show()
         return
     }
-    console.log('load')
     loading = true
-    $('.news-list__loading').text('Loading')
-    setTimeout(function () {
+    setTimeout(function(){
         if (loading) {
-            $('.news-list__loading').show()
-        } else {
-            $('.news-list__loading').html('<a class="btn-more" href="javascript:void(0);">More</a>').show()
+            $('.news-list__loading').text('Loading').show()
         }
     }, 300)
     $.get(BASE_URL + '/news/list', {
-        page_size: 20,
+        page_size: pageSize,
         page_index: pageIndex
     }).done(function(result){
         loading = false
         let res = JSON.parse(result)
-        console.log(res)
         if (res.code === 200) {
-            let arr = res.data.news_list.data
             pageTotal = parseInt(res.data.news_list.page_total)
-            if (pageIndex < pageTotal ) {
-                pageIndex = parseInt(res.data.news_list.page_index) + 1
-            }
-            console.log('news', arr)
-            if (arr.length === 0) {
-                $('.news-list__items').html('<li style="text-align: center;color: #ddd;">no data</li>')
+            if (pageIndex === pageTotal) {
+                $('.news-list__loading').html('No More').show()
             } else {
-                $('.news-list__items').html('')
+                $('.news-list__loading').html('<a class="btn-more" href="javascript:void(0);">More</a>').show()
+            }
+            pageIndex = parseInt(res.data.news_list.page_index) + 1
+            let arr = res.data.news_list.data
+            if (arr.length === 0) {
+                $('.news-list__loading').html('No Data').show()
+            } else {
                 arr.forEach(item => {
                     $('.news-list__items').append(`
                         <li class="item">
@@ -61,9 +58,17 @@ function getList() {
                         </li>
                     `)
                 })
+                let scrollTop = $(window).scrollTop()
+                let navHeight = $('.js_nav').height()
+                let categoryOffsetTop = $('.js_category').offset().top
+                if ((scrollTop + navHeight) >= categoryOffsetTop) {
+                    $('.js_nav').addClass('dark')
+                } else {
+                    $('.js_nav').removeClass('dark')
+                }
             }
         } else {
-            $('.news-list__items').html('<li style="text-align: center;color: #ddd;">no data</li>')
+            alert(res.data.news_list.message)
         }
     }).fail(function (error) {
         loading = false
@@ -83,8 +88,19 @@ $(window).bind('scroll', function () {
     }
 })
 
-$('body').on('click', '.btn-more', function () {
+$(document).on('click', '.btn-more', function () {
     getList()
+})
+
+$(window).bind('scroll', function () {
+    let scrollTop = $(window).scrollTop()
+    let navHeight = $('.js_nav').height()
+    let categoryOffsetTop = $('.js_category').offset().top
+    if ((scrollTop + navHeight) >= categoryOffsetTop) {
+        $('.js_nav').addClass('dark')
+    } else {
+        $('.js_nav').removeClass('dark')
+    }
 })
 
 

@@ -11,6 +11,16 @@ import '../../components/header/header.js'
 
 $('[data-target="index"]').addClass('active')
 
+setTimeout(function(){
+    let scrollTop = $(window).scrollTop()
+    console.log(scrollTop)
+    if (scrollTop <= 3) {
+        $('.js_footer').removeClass('hide')
+    } else {
+        $('.js_footer').addClass('hide')
+    }
+}, 60)
+
 // 推荐商品
 $.get(BASE_URL + '/commodity/admin/list', {
     page_size: 20,
@@ -47,8 +57,17 @@ $.get(BASE_URL + '/commodity/admin/list', {
                 `)
             })
         }
+        let scrollTop = $(window).scrollTop()
+        let navHeight = $('.js_nav').height()
+        let categoryOffsetTop = $('.js_category').offset().top
+        let downloadOffsetTop = $('#download').offset().top
+        if ((scrollTop + navHeight) >= categoryOffsetTop && (scrollTop + navHeight) < downloadOffsetTop) {
+            $('.js_nav').addClass('dark')
+        } else {
+            $('.js_nav').removeClass('dark')
+        }
     } else {
-        $('.best-choice__items').html('<li style="text-align: center;color: #ddd;">no data</li>')
+        alert(res.data.commodity.message)
     }
     if (location.href.indexOf('#download') !== -1) {
         setTimeout(() => {
@@ -90,8 +109,17 @@ $.get(BASE_URL + '/news/list', {
                 `)
             })
         }
+        let scrollTop = $(window).scrollTop()
+        let navHeight = $('.js_nav').height()
+        let categoryOffsetTop = $('.js_category').offset().top
+        let downloadOffsetTop = $('#download').offset().top
+        if ((scrollTop + navHeight) >= categoryOffsetTop && (scrollTop + navHeight) < downloadOffsetTop) {
+            $('.js_nav').addClass('dark')
+        } else {
+            $('.js_nav').removeClass('dark')
+        }
     } else {
-        $('.news-list__items').html('<li style="text-align: center;color: #ddd;">no data</li>')
+        alert(res.data.news_list.message)
     }
     if (location.href.indexOf('#download') !== -1) {
         setTimeout(() => {
@@ -100,4 +128,26 @@ $.get(BASE_URL + '/news/list', {
     }
 }).fail(function (error) {
     console.log(error)
+})
+
+$(window).bind('scroll', function () {
+    let scrollTop = $(this).scrollTop()
+    let navHeight = $('.js_nav').height()
+    let categoryOffsetTop = $('.js_category').offset().top
+    let downloadOffsetTop = $('#download').offset().top
+    if ((scrollTop + navHeight) >= categoryOffsetTop && (scrollTop + navHeight) < downloadOffsetTop) {
+        $('.js_nav').addClass('dark')
+    } else {
+        $('.js_nav').removeClass('dark')
+    }
+})
+
+$(window).bind('scroll', function () {
+    let scrollTop = $(this).scrollTop()
+    let downloadOffsetTop = $('#download').offset().top
+    if (scrollTop <= 3 || (scrollTop + 2) >= downloadOffsetTop) {
+        $('.js_footer').removeClass('hide')
+    } else {
+        $('.js_footer').addClass('hide')
+    }
 })
