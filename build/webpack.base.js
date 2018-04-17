@@ -98,36 +98,37 @@ module.exports = {
             Bootstrap is no longer checking for "window.Tether"
             but the global variable "Tether", so the webpack configuration becomes */
             'Tether': 'tether',
-            'window.Tether': 'tether'
+            'window.Tether': 'tether',
+            Popper: ['popper.js', 'default'],
         }),
         new webpack.DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify(NODE_ENV)
             }
         }),
-        new SpritesmithPlugin({
-            src: {
-                cwd: path.join(__dirname, '..', 'app/assets/sprite/'),
-                glob: '*.png'
-            },
-            target: {
-                image: path.join(__dirname, '..', 'app/assets/img/_sprites.png'),
-                css: [
-                    [path.join(__dirname, '..', 'app/assets/css/_sprites.css'), {
-                        format: 'handlebars_based_template'
-                    }]
-                ]
-            },
-            apiOptions: {
-                cssImageRef: '../img/_sprites.png'
-            },
-            customTemplates: {
-                'handlebars_based_template': path.join(__dirname, '..', 'handlebarsStr.css.handlebars')
-            },
-            spritesmithOptions: {
-                padding: 10
-            }
-        }),
+        // new SpritesmithPlugin({
+        //     src: {
+        //         cwd: path.join(__dirname, '..', 'app/assets/sprite/'),
+        //         glob: '*.png'
+        //     },
+        //     target: {
+        //         image: path.join(__dirname, '..', 'app/assets/img/_sprites.png'),
+        //         css: [
+        //             [path.join(__dirname, '..', 'app/assets/css/_sprites.css'), {
+        //                 format: 'handlebars_based_template'
+        //             }]
+        //         ]
+        //     },
+        //     apiOptions: {
+        //         cssImageRef: '../img/_sprites.png'
+        //     },
+        //     customTemplates: {
+        //         'handlebars_based_template': path.join(__dirname, '..', 'handlebarsStr.css.handlebars')
+        //     },
+        //     spritesmithOptions: {
+        //         padding: 10
+        //     }
+        // }),
         ...entry.map((current) => { return new HtmlWebpackPlugin(current.html) }),
         // new webpack.DllReferencePlugin({
         //     manifest: require('../dll_modules/dll-manifest.json')

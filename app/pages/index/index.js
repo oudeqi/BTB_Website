@@ -4,7 +4,7 @@ import { BASE_URL } from "../config";
 console.log(process.env.NODE_ENV);
 import 'bootstrap/dist/css/bootstrap.css'
 import './index.css'
-import 'bootstrap'
+
 import accounting from 'accounting'
 import '../../components/modal/modal.js'
 import '../../components/header/header.js'
